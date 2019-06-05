@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP_Snake
 {
@@ -10,13 +6,15 @@ namespace OOP_Snake
     {
         static void Main(string[] args)
         {
-            Console.WindowWidth = 120;
-            Console.WindowHeight = 40;
-            Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
-            Console.BackgroundColor = ConsoleColor.White;
+            int winWidth =  Console.WindowWidth = 120;
+            int winHeight = Console.WindowHeight = 40;
+            Console.SetBufferSize(winWidth, winHeight);
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.CursorVisible = false;
             Console.Clear();
 
+            GameEngine gameEngine = new GameEngine(winWidth, winHeight);
+            gameEngine.Start();
 
         }
     }

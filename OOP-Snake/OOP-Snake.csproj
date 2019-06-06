@@ -50,6 +50,7 @@
     <Compile Include="Shape.cs" />
     <Compile Include="WallHorizont.cs" />
     <Compile Include="Walls.cs" />
+    <Compile Include="WallVertical.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -18,6 +18,9 @@ namespace OOP_Snake
 
         internal void Start()
         {
+            Walls walls = new Walls(winWidth, winHeight , '*'); // Create walls 
+            walls.DrarWalls();
+
             Point point = new Point(5, 3, '*'); // coordinates of the first point
             point.Draw();
 

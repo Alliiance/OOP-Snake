@@ -21,8 +21,6 @@ namespace OOP_Snake
 
         public void Draw()
         {
-            int positionX = x;
-            int positionY = y;
             Console.SetCursorPosition(x, y);
             Console.WriteLine(token);
         }

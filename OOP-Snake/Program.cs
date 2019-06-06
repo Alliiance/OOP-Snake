@@ -7,7 +7,7 @@ namespace OOP_Snake
         static void Main(string[] args)
         {
             int winWidth =  Console.WindowWidth = 120;
-            int winHeight = Console.WindowHeight = 40;
+            int winHeight = Console.WindowHeight = 35;
             Console.SetBufferSize(winWidth, winHeight);
             Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.CursorVisible = false;

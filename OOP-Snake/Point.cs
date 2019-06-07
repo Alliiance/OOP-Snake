@@ -11,6 +11,13 @@ namespace OOP_Snake
         private int x , y;
         private char token;
 
+        public Point(Point tail)
+        {
+            this.x = tail.x;
+            this.y = tail.y;
+            this.token = tail.token;
+        }
+
         public Point(int x , int y , char token)
         {
             this.x = x;
@@ -18,6 +25,17 @@ namespace OOP_Snake
             this.token = token;
         }
 
+        internal void Move(int run, Direction direction)
+        {
+            if (direction == Direction.Right)
+                x += run;
+            else if(direction == Direction.Left)
+                x -= run;
+            else if (direction == Direction.Up)
+                y -= run;
+            else if (direction == Direction.Down)
+                y += run;
+        }
 
         public void Draw()
         {

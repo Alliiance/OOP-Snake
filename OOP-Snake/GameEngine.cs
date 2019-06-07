@@ -22,7 +22,9 @@ namespace OOP_Snake
             walls.DrarWalls();
 
             Point point = new Point(5, 3, '*'); // coordinates of the first point
-            point.Draw();
+
+            Snake snake = new Snake(point, 4, Direction.Right);
+            snake.DrawFigere();
 
             Console.ReadKey();
         }

@@ -37,6 +37,12 @@ namespace OOP_Snake
                 y += run;
         }
 
+        internal void Clear()
+        {
+            token = ' ';
+            Draw();
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

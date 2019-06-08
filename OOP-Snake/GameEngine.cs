@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OOP_Snake
@@ -25,6 +26,21 @@ namespace OOP_Snake
 
             Snake snake = new Snake(point, 4, Direction.Right);
             snake.DrawFigere();
+
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
+            snake.Move();
+            Thread.Sleep(100);
 
             Console.ReadKey();
         }

@@ -38,5 +38,17 @@ namespace OOP_Snake
             nextPoint.Move(1, direction);
             return nextPoint;
         }
+
+        internal void PutButton(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Direction.Left;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.Right;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.Down;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.Up;
+        }
     }
 }

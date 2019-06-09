@@ -27,22 +27,23 @@ namespace OOP_Snake
             Snake snake = new Snake(point, 4, Direction.Right);
             snake.DrawFigere();
 
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
-            snake.Move();
-            Thread.Sleep(100);
+            while (true)
+            {
 
-            Console.ReadKey();
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.PutButton(key.Key);
+                }
+                else
+                {
+                    snake.Move();
+                }
+                Thread.Sleep(100);
+
+            }
+
+
         }
     }
 }

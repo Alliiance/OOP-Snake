@@ -27,19 +27,31 @@ namespace OOP_Snake
             Snake snake = new Snake(point, 4, Direction.Right);
             snake.DrawFigere();
 
+            CreateFood createFood = new CreateFood(winWidth, winHeight, '*');
+            Point food = createFood.GetFood();
+            food.Draw();
+
             while (true)
             {
 
+
+                if (snake.IsFood(food))
+                {
+                    food = createFood.GetFood();
+                    food.Draw();
+                }
+
+                else
+                {
+                    snake.Move();
+                }
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.PutButton(key.Key);
                 }
-                else
-                {
-                    snake.Move();
-                }
-                Thread.Sleep(100);
+
+                Thread.Sleep(80);
 
             }
 

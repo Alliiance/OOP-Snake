@@ -50,5 +50,19 @@ namespace OOP_Snake
             else if (key == ConsoleKey.UpArrow)
                 direction = Direction.Up;
         }
+
+        internal bool IsFood(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsItPoint(food))
+            {
+                figures.Add(head);
+                return true;
+
+            }
+
+            return false;
+        }
+
     }
 }

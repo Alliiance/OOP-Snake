@@ -43,6 +43,12 @@ namespace OOP_Snake
             Draw();
         }
 
+        internal bool IsItPoint(Point head)
+        {
+            return x == head.x && y == head.y;
+        }
+
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

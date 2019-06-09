@@ -33,7 +33,10 @@ namespace OOP_Snake
 
             while (true)
             {
-
+                if (walls.IsWall(snake) || snake.IsRam())
+                {
+                    break;
+                }
 
                 if (snake.IsFood(food))
                 {

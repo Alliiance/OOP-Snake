@@ -17,5 +17,24 @@ namespace OOP_Snake
                 point.Draw();
             }
         }
+        internal bool IsHit(Shape snake)
+        {
+            foreach (var item in figures)
+            {
+                if (snake.IsFigure(item))
+                    return true;
+            }
+            return false;
+        }
+
+        private bool IsFigure(Point item)
+        {
+            foreach (var p in figures)
+            {
+                if (p.IsItPoint(item))
+                    return true;
+            }
+            return false;
+        }
     }
 }

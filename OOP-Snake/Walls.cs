@@ -35,8 +35,15 @@ namespace OOP_Snake
             }
         }
 
+        public bool IsWall(Snake snake)
+        {
+            foreach (var item in wallList)
+            {
+                if (item.IsHit(snake))
+                    return true;
+            }
+            return false;
+        }
 
-        
-        
     }
 }

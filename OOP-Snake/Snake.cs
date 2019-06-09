@@ -51,6 +51,20 @@ namespace OOP_Snake
                 direction = Direction.Up;
         }
 
+        internal bool IsRam()
+        {
+
+            for (int i = 0; i < figures.Count - 2; i++)
+            {
+                Point head = figures.Last();
+                if (head.IsItPoint(figures[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         internal bool IsFood(Point food)
         {
             Point head = GetNextPoint();

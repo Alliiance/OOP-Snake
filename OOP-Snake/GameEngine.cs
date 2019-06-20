@@ -29,6 +29,8 @@ namespace OOP_Snake
 
             CreateFood createFood = new CreateFood(winWidth, winHeight, '*');
             Point food = createFood.GetFood();
+            PlayingScore playingScore = new PlayingScore(winHeight , "You have :");
+            BestScore bestScore = new BestScore(winHeight, winWidth, "Best score :");
             food.Draw();
 
             while (true)
@@ -42,6 +44,7 @@ namespace OOP_Snake
                 {
                     food = createFood.GetFood();
                     food.Draw();
+                    playingScore.Add();
                 }
 
                 else
@@ -53,8 +56,7 @@ namespace OOP_Snake
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.PutButton(key.Key);
                 }
-
-                Thread.Sleep(80);
+                Thread.Sleep(100);
 
             }
 

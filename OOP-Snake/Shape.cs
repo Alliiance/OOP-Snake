@@ -17,6 +17,7 @@ namespace OOP_Snake
                 point.Draw();
             }
         }
+
         internal bool IsHit(Shape snake)
         {
             foreach (var item in figures)

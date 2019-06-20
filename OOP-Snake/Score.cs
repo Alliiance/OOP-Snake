@@ -8,6 +8,7 @@ namespace OOP_Snake
 {
     class Score
     {
+        protected static int scorePoints;
         private int positionX, positionY;
         private int scoreNow, scoreBest;
 

@@ -45,6 +45,7 @@ namespace OOP_Snake
                     food = createFood.GetFood();
                     food.Draw();
                     playingScore.Add();
+                    bestScore.CheckScore();
                 }
 
                 else

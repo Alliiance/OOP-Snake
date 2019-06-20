@@ -9,7 +9,6 @@ namespace OOP_Snake
     class PlayingScore : Score
     {
         private int winHeight;
-        private int scorePoints;
         private string scoreText;
 
         public PlayingScore(int winHeight , string scoreText)
@@ -24,6 +23,7 @@ namespace OOP_Snake
         {
             scorePoints += 10;
             Draw(2, winHeight - 2, scorePoints, scoreText);
+
         }
     }
 }

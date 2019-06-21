@@ -24,7 +24,7 @@ namespace OOP_Snake
 
             Point point = new Point(5, 3, '*'); // coordinates of the first point
 
-            Snake snake = new Snake(point, 4, Direction.Right);
+            Snake snake = new Snake(point, 3, Direction.Right);
             snake.DrawFigere();
 
             CreateFood createFood = new CreateFood(winWidth, winHeight, '*');
@@ -32,13 +32,25 @@ namespace OOP_Snake
             Score score = new Score(winHeight, winWidth);
             PlayingScore playingScore = new PlayingScore(winWidth , winHeight, "You have :");
             BestScore bestScore = new BestScore(winWidth, winHeight, "Best score :");
+            ContinueGame ContinueGame = new ContinueGame(winWidth, winHeight);
             food.Draw();
 
             while (true)
             {
                 if (walls.IsWall(snake) || snake.IsLine())
                 {
-                    Start();
+                    if (ContinueGame.GoOnGame())
+                    {
+                        snake.ClearAll(winWidth, winHeight);
+                        score.MakeZeroPoints();
+                        Start();
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
                 }
 
                 if (snake.IsFood(food))
@@ -61,8 +73,6 @@ namespace OOP_Snake
                 Thread.Sleep(100);
 
             }
-
-
         }
     }
 }

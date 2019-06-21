@@ -23,5 +23,10 @@ namespace OOP_Snake
              Console.SetCursorPosition(posX, winHeight - 2);
              Console.WriteLine($"{text} {score} points");
         }
+
+        internal void MakeZeroPoints()
+        {
+            scorePoints = 0;
+        }
     }
 }

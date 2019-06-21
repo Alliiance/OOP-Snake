@@ -56,7 +56,7 @@ namespace OOP_Snake
             for (int i = 0; i < figures.Count - 2; i++)
             {
                 Point head = figures.Last();
-                if (head.IsItPoint(figures[i]))
+                if (head.CheckPoint(figures[i]))
                 {
                     return true;
                 }
@@ -67,13 +67,25 @@ namespace OOP_Snake
         internal bool IsFood(Point food)
         {
             Point head = GetNextPoint();
-            if (head.IsItPoint(food))
+            if (head.CheckPoint(food))
             {
                 figures.Add(head);
                 return true;
 
             }
             return false;
+        }
+
+        internal void ClearAll(int winWidth, int winHeight)
+        {
+            for (int i = 0; i < winWidth; i++)
+            {
+                for (int j = 0; j < winHeight; j++)
+                {
+                    Point point = new Point(i, j, ' ');
+                    point.Draw();
+                }
+            }
         }
     }
 }

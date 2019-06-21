@@ -43,7 +43,7 @@ namespace OOP_Snake
             Draw();
         }
 
-        internal bool IsItPoint(Point head)
+        internal bool CheckPoint(Point head)
         {
             return x == head.x && y == head.y;
         }

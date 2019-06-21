@@ -32,7 +32,7 @@ namespace OOP_Snake
         {
             foreach (var p in figures)
             {
-                if (p.IsItPoint(item))
+                if (p.CheckPoint(item))
                     return true;
             }
             return false;

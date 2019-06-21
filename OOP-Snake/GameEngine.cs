@@ -29,15 +29,16 @@ namespace OOP_Snake
 
             CreateFood createFood = new CreateFood(winWidth, winHeight, '*');
             Point food = createFood.GetFood();
-            PlayingScore playingScore = new PlayingScore(winHeight , "You have :");
-            BestScore bestScore = new BestScore(winHeight, winWidth, "Best score :");
+            Score score = new Score(winHeight, winWidth);
+            PlayingScore playingScore = new PlayingScore(winWidth , winHeight, "You have :");
+            BestScore bestScore = new BestScore(winWidth, winHeight, "Best score :");
             food.Draw();
 
             while (true)
             {
-                if (walls.IsWall(snake) || snake.IsRam())
+                if (walls.IsWall(snake) || snake.IsLine())
                 {
-                    break;
+                    Start();
                 }
 
                 if (snake.IsFood(food))

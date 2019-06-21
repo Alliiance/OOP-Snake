@@ -8,7 +8,6 @@ namespace OOP_Snake
 {
     class CreateFood
     {
-
         int x, y;
         char sym;
         Random rand = new Random();

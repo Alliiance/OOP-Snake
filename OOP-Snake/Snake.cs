@@ -51,9 +51,8 @@ namespace OOP_Snake
                 direction = Direction.Up;
         }
 
-        internal bool IsRam()
+        internal bool IsLine()
         {
-
             for (int i = 0; i < figures.Count - 2; i++)
             {
                 Point head = figures.Last();
@@ -74,9 +73,7 @@ namespace OOP_Snake
                 return true;
 
             }
-
             return false;
         }
-
     }
 }

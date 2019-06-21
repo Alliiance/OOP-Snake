@@ -48,12 +48,10 @@ namespace OOP_Snake
             return x == head.x && y == head.y;
         }
 
-
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(token);
         }
-
     }
 }

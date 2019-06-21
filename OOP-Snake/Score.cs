@@ -8,15 +8,20 @@ namespace OOP_Snake
 {
     class Score
     {
+        protected int winWidth;
+        protected int winHeight;
         protected static int scorePoints;
-        private int positionX, positionY;
-        private int scoreNow, scoreBest;
 
-        public void Draw(int posX ,int posY ,int score, string text )
+        public Score(int winWidth , int winHeight)
         {
-            Console.SetCursorPosition(posX, posY);
-            Console.WriteLine($"{text} {score} points");
+            this.winWidth = winWidth;
+            this.winHeight = winHeight;
         }
 
+        public void Draw(int posX  ,int score, string text )
+        {
+             Console.SetCursorPosition(posX, winHeight - 2);
+             Console.WriteLine($"{text} {score} points");
+        }
     }
 }

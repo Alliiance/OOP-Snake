@@ -8,21 +8,20 @@ namespace OOP_Snake
 {
     class PlayingScore : Score
     {
-        private int winHeight;
+
         private string scoreText;
 
-        public PlayingScore(int winHeight , string scoreText)
+        public PlayingScore (int winWidth, int winHeight, string scoreText) :base (winWidth, winHeight)
         {
-            this.winHeight = winHeight;
             this.scoreText = scoreText;
-            Draw(2 , winHeight - 2, scorePoints , scoreText);
+            Draw(2 , scorePoints , scoreText);
         }
 
 
         internal void Add()
         {
             scorePoints += 10;
-            Draw(2, winHeight - 2, scorePoints, scoreText);
+            Draw(2, scorePoints, scoreText);
 
         }
     }

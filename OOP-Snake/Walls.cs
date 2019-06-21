@@ -8,7 +8,6 @@ namespace OOP_Snake
 {
     class Walls
     {
-
         List<Shape> wallList;
 
         public Walls(int winWidth , int winHeight , char token)
@@ -43,6 +42,5 @@ namespace OOP_Snake
             }
             return false;
         }
-
     }
 }

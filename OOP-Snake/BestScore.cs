@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+
+
 namespace OOP_Snake
 {
     class BestScore : Score
     {
-        private int winHeight;
-        private int winWidth;
         private int bestPoints;
-        private string bestScoreText;
-
+        private string bestScoreText;        
         string path = "Score.txt";
 
-        public BestScore(int winHeight, int winWidth, string bestScoreText)
+        public BestScore(int winWidth, int winHeight ,string bestScoreText) : base(winWidth, winHeight)
         {
-            this.winHeight = winHeight;
-            this.winWidth = winWidth;
             this.bestScoreText = bestScoreText;
+
             using (StreamReader sr = new StreamReader(path))
             {
                 bestPoints = Convert.ToInt32(sr.ReadToEnd());
             }
-            Draw(winWidth - 24, winHeight - 2, bestPoints, bestScoreText);
+            Draw(winWidth - 24, bestPoints, bestScoreText);
+            
         }
+
         public void CheckScore()
         {
             try
@@ -37,7 +37,7 @@ namespace OOP_Snake
                     {
                         sw.WriteLine(scorePoints);
                     }
-                    Draw(winWidth - 24, winHeight - 2, scorePoints, bestScoreText);
+                    Draw(winWidth - 24, scorePoints, bestScoreText);
                 }
             }
             catch (Exception e)
@@ -45,6 +45,5 @@ namespace OOP_Snake
                 Console.WriteLine(e.Message);           
             }
         }
-
     }
 }

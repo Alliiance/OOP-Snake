@@ -18,11 +18,17 @@ namespace OOP_Snake
         {
             this.bestScoreText = bestScoreText;
 
+            if (!File.Exists(path))
+            {
+                File.WriteAllText(path, "0");
+            }
+
             using (StreamReader sr = new StreamReader(path))
             {
                 bestPoints = Convert.ToInt32(sr.ReadToEnd());
             }
             Draw(winWidth - 24, bestPoints, bestScoreText);
+
             
         }
 

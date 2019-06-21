@@ -10,7 +10,7 @@ namespace OOP_Snake
     {
         int x, y;
         char sym;
-        Random rand = new Random();
+        static Random rand = new Random();
 
         public CreateFood(int width, int height, char sym)
         {

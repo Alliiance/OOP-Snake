@@ -44,9 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BestScore.cs" />
-    <Compile Include="ContinueGame.cs" />
     <Compile Include="Direction.cs" />
-    <Compile Include="CreateFood.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />

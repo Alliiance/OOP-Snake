@@ -78,9 +78,9 @@ namespace OOP_Snake
 
         internal void ClearAll(int winWidth, int winHeight)
         {
-            for (int i = 0; i < winWidth; i++)
+            for (int i = 2; i < winWidth - 2; i++)
             {
-                for (int j = 0; j < winHeight; j++)
+                for (int j = 2; j < winHeight - 3; j++)
                 {
                     Point point = new Point(i, j, ' ');
                     point.Draw();

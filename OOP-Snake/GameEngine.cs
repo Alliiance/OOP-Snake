@@ -40,8 +40,7 @@ namespace OOP_Snake
         }
 
         internal void Start()
-        {
-          
+        {     
             Walls walls = new Walls(winWidth, winHeight , '*'); 
             walls.DrarWalls();
 
@@ -70,9 +69,7 @@ namespace OOP_Snake
                         food.Draw();
                     }
                     else
-                    {
                         break;
-                    }
                 }
 
                 if (snake.IsFood(food))
@@ -82,11 +79,9 @@ namespace OOP_Snake
                     playingScore.Add();
                     bestScore.CheckScore();
                 }
-
                 else
-                {
                     snake.Move();
-                }
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();

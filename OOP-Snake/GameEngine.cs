@@ -71,7 +71,6 @@ namespace OOP_Snake
                     snake.PutButton(key.Key);
                 }
                 Thread.Sleep(100);
-
             }
         }
     }

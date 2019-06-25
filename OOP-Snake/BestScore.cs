@@ -27,9 +27,7 @@ namespace OOP_Snake
             {
                 bestPoints = Convert.ToInt32(sr.ReadToEnd());
             }
-            Draw(winWidth - 24, bestPoints, bestScoreText);
-
-            
+            Draw(winWidth - 24, bestPoints, bestScoreText);    
         }
 
         public void CheckScore()

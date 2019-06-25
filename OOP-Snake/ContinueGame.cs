@@ -27,8 +27,7 @@ namespace OOP_Snake
             if (input == "yes")
                 return true;
             else
-                return false;
-          
+                return false;         
         }
     }
 }
